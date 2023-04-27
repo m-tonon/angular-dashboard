@@ -46,6 +46,7 @@ export const routes: Routes = [
     ],
   },
   { path: '', redirectTo: 'pages', pathMatch: 'full' },
+  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
   { path: '**', redirectTo: 'pages' },
 ];
 
